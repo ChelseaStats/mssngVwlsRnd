@@ -5,7 +5,7 @@
 	$pdo = new CronDB();
 	$pdo->query("SELECT count(*) as counter FROM table WHERE counter = 0");
 	$row = $pdo->row();
-	if(isset($row['counter'] && $row['counter'] > 1) {
+	if(isset($row['counter']) && $row['counter'] > 1) {
 		mssngVwls();
 	} else {
 		$pdo->query("UPDATE table SET counter='0' WHERE ID > 0 ");
