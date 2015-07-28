@@ -21,7 +21,7 @@
 		$name 		= str_replace($vowels, "", $name);
 		$length 	= strlen($name);
 		$random 	= rand(1,$length);
-		$mssngVwls 	= strrev(chunk_split (strrev($mssngVwls), $random,' '));
+		$mssngVwls 	= strrev(chunk_split (strrev($name), $random,' '));
 		$answer 	= $pdo->_V($row['field']);
 		$id 		= $row['ID'];
 		$pdo->Tweet("Missng vowels game : {$mssngVwls}");
