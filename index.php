@@ -12,16 +12,14 @@
 		$pdo->execute();
 		mssngVwls();
 	}
-	
 	function mssngVwls() {
 		$pdo->query("SELECT ID, field FROM table WHERE counter = 0 ORDER BY RAND() LIMIT 1");
 		$row 		= $pdo->row();
-		$name 		= str_replace('_','',$row['field']);
-		$vowels 	= array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U", " ");
-		$name 		= str_replace($vowels, "", $name);
+		$vowels 	= array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U",'_', " ");
+		$name 		= str_replace($vowels, "", $row['field']);
 		$length 	= strlen($name);
 		$random 	= rand(1,$length);
-		$mssngVwls 	= strrev(chunk_split (strrev($name), $random,' '));
+		$mssngVwls 	= strrev(chunk_split(strrev($name), $random,' '));
 		$answer 	= $pdo->_V($row['field']);
 		$id 		= $row['ID'];
 		$pdo->Tweet("Missng vowels game : {$mssngVwls}");
