@@ -15,7 +15,7 @@
 	function mssngVwls() {
 		$pdo->query("SELECT ID, field FROM table WHERE counter = 0 ORDER BY RAND() LIMIT 1");
 		$row 		= $pdo->row();
-		$vowels 	= array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U","_", " ");
+		$vowels 	= array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U", "_", " ");
 		$name 		= str_replace($vowels, "", $row['field']);
 		$length 	= strlen($name);
 		$random 	= rand(1,$length);
