@@ -1,4 +1,4 @@
-name: Tweet
+name: Process Data
 on:
   workflow_dispatch:
   schedule:
