@@ -24,10 +24,10 @@ def anagram(string):
 
 # processing
 with open('data_source.csv') as csvfile:
- reader = csv.DictReader(csvfile)
+ reader = csv.reader(csvfile)
  row = random.choice(reader)
  answer = row['text']
  question = anagram(row['text'])
- api.update_status(status = "#Anagram Name the Chelsea player: " + question)     
+ api.update_status(status = "#AnagramGame Name the Chelsea player: " + question)     
  time.sleep(10 * 60)
- api.update_status(status = "#Anagram Well done if you got it, the answer was: " + answer) 
+ api.update_status(status = "#AnagramGame Well done if you got it, the answer was: " + answer) 
