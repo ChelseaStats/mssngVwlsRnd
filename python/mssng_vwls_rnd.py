@@ -22,7 +22,7 @@ stripped = str.maketrans(dict.fromkeys('aeiouAEIOU -'))
 # processing
 with open('data_source.csv') as csvfile:
  reader = csv.DictReader(csvfile)
- row = random.choice(reader)
+ row = random.choice(list(reader))
  answer = row['text']
  question = (row['text']).translate(stripped)
  api.update_status(status = "#MssngVwlsRnd Name the Chelsea player: " + question)     

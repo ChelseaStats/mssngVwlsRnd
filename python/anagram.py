@@ -25,7 +25,7 @@ def anagram(string):
 # processing
 with open('data_source.csv') as csvfile:
  reader = csv.DictReader(csvfile)
- random_row = random.choice(reader)
+ random_row = random.choice(list(reader))
  answer = random_row['text']
  question = anagram(random_row['text'])
  api.update_status(status = "#AnagramGame Name the Chelsea player: " + question)     
