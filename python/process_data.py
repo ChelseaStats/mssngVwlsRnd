@@ -21,6 +21,6 @@ with open('data_source.csv') as csvfile:
  for row in reader:
     answer = row['text']
     question = (row['text']).translate(stripped)
-    api.update_status(status = "Name the Chelsea player: " + question)     
+    api.update_status(status = "#MssngVwlsRnd Name the Chelsea player: " + question)     
     time.sleep(10 * 60)
-    api.update_status(status = "Well done if you got it, the answer was: " + answer) 
+    api.update_status(status = "#MssngVwlsRnd Well done if you got it, the answer was: " + answer) 
