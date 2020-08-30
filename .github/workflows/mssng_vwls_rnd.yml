@@ -31,4 +31,4 @@ jobs:
         a_token: ${{ secrets.TW_ACCESS_TOKEN }}
         a_secret:  ${{ secrets.TW_ACCESS_SECRET }}
       run: |-
-        python 'python/process_data.py'
+        python 'python/mssng_vwls_rnd.py'
