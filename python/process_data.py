@@ -3,6 +3,8 @@ import tweepy
 import os
 import csv
 import time
+import random
+
 # secrets 
 consumer_key = os.getenv('c_key')
 consumer_secret = os.getenv('c_secret')
@@ -18,9 +20,9 @@ stripped = str.maketrans(dict.fromkeys('aeiouAEIOU '))
 # processing
 with open('data_source.csv') as csvfile:
  reader = csv.DictReader(csvfile)
- for row in reader:
-    answer = row['text']
-    question = (row['text']).translate(stripped)
-    api.update_status(status = "#MssngVwlsRnd Name the Chelsea player: " + question)     
-    time.sleep(10 * 60)
-    api.update_status(status = "#MssngVwlsRnd Well done if you got it, the answer was: " + answer) 
+ row = random.choice(reader)
+ answer = row['text']
+ question = (row['text']).translate(stripped)
+ api.update_status(status = "#MssngVwlsRnd Name the Chelsea player: " + question)     
+ time.sleep(10 * 60)
+ api.update_status(status = "#MssngVwlsRnd Well done if you got it, the answer was: " + answer) 
