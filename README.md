@@ -1,4 +1,4 @@
-# Word Games Bot for Twitter
+# Chelsea Puzzles Word Games Bot for Twitter
 
 ![mssng vwls rnd](https://github.com/TheChelsOrg/bot_chelsea_puzzles/workflows/mssng%20vwls%20rnd/badge.svg) ![Anagram](https://github.com/TheChelsOrg/bot_chelsea_puzzles/workflows/Anagram/badge.svg)
 
