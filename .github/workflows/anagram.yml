@@ -1,4 +1,4 @@
-name: Process Data
+name: Anagram
 on:
   workflow_dispatch:
   schedule:
