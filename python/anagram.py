@@ -15,14 +15,17 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret) 
 api = tweepy.API(auth) 
 # functions
-stripped = str.maketrans(dict.fromkeys('aeiouAEIOU '))
+def anagram(string)
+ l = list(string)
+ random.shuffle(l)
+ return ''.join(l)
 
 # processing
 with open('data_source.csv') as csvfile:
  reader = csv.DictReader(csvfile)
  row = random.choice(reader)
  answer = row['text']
- question = (row['text']).translate(stripped)
+ question = anagram(row['text'])
  api.update_status(status = "#Anagram Name the Chelsea player: " + question)     
  time.sleep(10 * 60)
  api.update_status(status = "#Anagram Well done if you got it, the answer was: " + answer) 
