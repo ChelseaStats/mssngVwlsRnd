@@ -2,7 +2,7 @@ name: Process Data
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 */6 * * *'
+    - cron:  '0 2/6 * * *'
 
 jobs:
   build:
@@ -31,4 +31,4 @@ jobs:
         a_token: ${{ secrets.TW_ACCESS_TOKEN }}
         a_secret:  ${{ secrets.TW_ACCESS_SECRET }}
       run: |-
-        python 'python/mssng_vwls_rnd.py'
+        python 'python/anagram.py'
