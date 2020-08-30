@@ -14,4 +14,4 @@ Anagrams are a simple shuffle of the characters of the player's names and tweete
 
 The repository is made up of a CSV file that needs to be kept up to date with player names. The rest are python scripts in the `python` folder - these are used by scheduled GitHub actions. These actions run on the latest ubuntu, install python and some some packages. It runs the code then completes, deleting the inftastructure hosted by GitHub.
 
-Twitter requires a developer account and application being set up. The credentials (keys, secrets and tokens) are stored in the secrets vault in GitHub and their values are visible once during setting and and are accessible by name.
+Twitter requires a developer account and application being set up. The credentials (keys, secrets and tokens) are stored in the secrets vault in GitHub and their values are visible once during setting and and are accessible only by name.
