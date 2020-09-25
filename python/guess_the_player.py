@@ -22,7 +22,7 @@ api = tweepy.API(auth)
 # processing
 with open('player_history.csv') as csvfile:
  reader = csv.DictReader(csvfile)
- row = random.choice(list(reader for reader in reader if reader['Active'] == 0 and reader['Apps'] > 0))
+ row = random.choice(list(reader))
  name = row['Player Name']
  apps = row['Games']
  goals = row['Goals']
@@ -31,6 +31,10 @@ with open('player_history.csv') as csvfile:
  debut = row['Debut']
  active = row['Active']
 
-api.update_status(status = f"#GuessThePlayer This former blue made their debut on {debut} making a total of {apps} appearances, scoring {goals} goal(s)")
+if(active == 1):
+    api.update_status(status = f"#GuessThePlayer This player made his debut on {debut} making {apps} appearances so far, scoring {goals} goal(s)")
+else:
+    api.update_status(status = f"#GuessThePlayer This former blue made his debut on {debut} making a total of {apps} appearances, scoring {goals} goal(s)")
+
 time.sleep(10 * 60)
 api.update_status(status = f"#GuessThePlayer Well done if you got it, the answer was: {name}")
