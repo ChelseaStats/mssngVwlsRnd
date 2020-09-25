@@ -1,6 +1,9 @@
 # Chelsea Puzzles Word Games Bot for Twitter
 
-![mssng vwls rnd](https://github.com/TheChelsOrg/bot_chelsea_puzzles/workflows/mssng%20vwls%20rnd/badge.svg) ![Anagram](https://github.com/TheChelsOrg/bot_chelsea_puzzles/workflows/Anagram/badge.svg) ![Linter](https://github.com/TheChelsOrg/bot_chelsea_puzzles/workflows/Linter/badge.svg)
+- ![mssng vwls rnd](https://github.com/TheChelsOrg/bot_chelsea_puzzles/workflows/mssng%20vwls%20rnd/badge.svg) 
+- ![Anagram](https://github.com/TheChelsOrg/bot_chelsea_puzzles/workflows/Anagram/badge.svg) 
+- ![Guess the player](https://github.com/TheChelsOrg/bot_chelsea_puzzles/workflows/Guess%20the%20player/badge.svg)
+- ![Linter](https://github.com/TheChelsOrg/bot_chelsea_puzzles/workflows/Linter/badge.svg)
 
 > This repo contains two game types that post on twitter.
 
