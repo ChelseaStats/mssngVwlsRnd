@@ -26,8 +26,8 @@ with open('player_history.csv') as csvfile:
  name = row['Player Name']
  apps = row['Games']
  goals = row['Goals']
- starts = row['Starters']
- subs = row['Subs']
+ starts = row['Starter']
+ subs = row['Sub']
  debut = row['Debut']
  active = row['Active']
 
