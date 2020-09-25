@@ -26,11 +26,11 @@ def anagram(string):
  return ''.join(l)
 
 # processing
-with open('data_source.csv') as csvfile:
+with open('player_history.csv') as csvfile:
  reader = csv.DictReader(csvfile)
  random_row = random.choice(list(reader))
- answer = random_row['text']
- question = anagram(random_row['text'])
+ answer = random_row['Player Name']
+ question = anagram(random_row['Player Name'])
  api.update_status(status = "#AnagramGame Name the Chelsea player: " + question)
  time.sleep(10 * 60)
  api.update_status(status = "#AnagramGame Well done if you got it, the answer was: " + answer)
