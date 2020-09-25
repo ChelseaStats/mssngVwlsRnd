@@ -2,7 +2,7 @@
 name: Create issue
 on:
   schedule:
-    - cron: '0 8 */52 * *'
+    - cron: '0 8 */5 * *'
 jobs:
   create_issue:
     name: Create scheduled issue
