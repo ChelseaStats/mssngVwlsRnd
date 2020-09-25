@@ -2,7 +2,7 @@ name: Guess the player
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 */9 * * *'
+    - cron:  '0 4/6 * * *'
 
 jobs:
   build:
