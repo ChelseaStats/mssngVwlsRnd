@@ -49,7 +49,7 @@ with open('player_history.csv') as csvfile:
  row = random.choice(list(reader))
  name = row['Player Name']
  apps = row['Games']
- goals = get_goals_string(row['Goals'] or 0)
+ goals = get_goals_string(int(row['Goals'] or 0))
  starts = row['Starter'] or 0
  subs = row['Sub'] or 0
  active = row['Active']
