@@ -1,7 +1,5 @@
-import os
 import csv
 import pytest
-import csv
 
 def tests():
     with open('player_history.csv') as csvfile:
