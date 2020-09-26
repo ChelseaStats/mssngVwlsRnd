@@ -1,4 +1,4 @@
-name: Anagram
+name: Tests
 on:
   [push, pull_request]
 jobs:
@@ -23,4 +23,4 @@ jobs:
         python -m pip install -r requirements.txt
     - name: run Tests
       run: |
-        pytest tests.py
+        pytest tests/tests.py
