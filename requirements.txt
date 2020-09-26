@@ -1,3 +1,4 @@
 tweepy
 pylint
 datefinder
+pytest
