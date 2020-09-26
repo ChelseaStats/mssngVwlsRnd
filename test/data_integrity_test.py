@@ -4,7 +4,7 @@ import pytest
 import csv
 
 def tests():
-    with open('../player_history.csv') as csvfile:
+    with open('player_history.csv') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             name = row['Player Name']
@@ -12,6 +12,7 @@ def tests():
             starts = row['Starter'] or 0
             subs = row['Sub'] or 0
             response = checker(name, apps, starts, subs)
+            print(name)
             assert response == True
 
 
