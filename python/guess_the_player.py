@@ -42,7 +42,6 @@ def get_date_from_string(date):
         date_string = ""
     return date_string
 
-
 # processing
 with open('player_history.csv') as csvfile:
  reader = csv.DictReader(csvfile)
@@ -54,7 +53,6 @@ with open('player_history.csv') as csvfile:
  subs = row['Sub'] or 0
  active = row['Active']
  debut = get_date_from_string(row['Debut'])
-
 
 if(active == 1):
     api.update_status(status = f"#GuessThePlayer This player made his debut on {debut} making {apps} appearances so far, scoring {goals}.")
