@@ -12,6 +12,8 @@ class player:
         self.total = self.starts + self.subs
         self.active = active
         self.debut = debut
+
+
     def __repr__(self):
         return repr(self.name, self.goals, self.apps, self.starts, self.subs, self.total, self.active, self.debut)
 
