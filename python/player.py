@@ -49,9 +49,12 @@ class player:
             return ''.join(l)
 
         def get_guess_player_string(self):
-            goals_string = self.get_goals_string()
-            debut_string = self.get_date_from_string()
-            if(self.active == 1):
-                return f"#GuessThePlayer This player made his debut for #Chelsea on {debut_string} making {self.apps} appearances so far, scoring {goals_string}. #CFC"
+            if(self.apps == 0):
+                return "error"
             else:
-                return f"#GuessThePlayer This formerblue made his debut for #Chelsea on {debut_string} making a total of {self.apps} appearances, scoring {goals_string}. #CFC"
+                goals_string = self.get_goals_string()
+                debut_string = self.get_date_from_string()
+                if(self.active == 1):
+                    return f"#GuessThePlayer This player made his debut for #Chelsea on {debut_string} making {self.apps} appearances so far, scoring {goals_string}. #CFC"
+                else:
+                    return f"#GuessThePlayer This formerblue made his debut for #Chelsea on {debut_string} making a total of {self.apps} appearances, scoring {goals_string}. #CFC"
