@@ -3,7 +3,7 @@ import csv
 import pytest
 import player
 
-#Tests
+# tests
 def test_given_player_apps_matches_total_returns_true():
     with open('player_history.csv') as csvfile:
         reader = csv.DictReader(csvfile)

@@ -2,6 +2,7 @@
 import datefinder
 import random
 
+
 # Class
 class player:
     def __init__(self, name, goals, apps, starts, subs, active, debut):
@@ -14,12 +15,11 @@ class player:
         self.active = active
         self.debut = debut
 
-
     def __repr__(self):
         return repr(self.name, self.goals, self.apps, self.starts, self.subs, self.total, self.active, self.debut)
 
     def check_apps_matches_total(self):
-        if(self.apps!=self.total):
+        if(self.apps != self.total):
             print(self.name)
             return False
         else:
