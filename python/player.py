@@ -1,8 +1,8 @@
-    # importing modules
+# importing modules
 import datefinder
 import random
 
-
+# Class
 class player:
     def __init__(self, name, goals, apps, starts, subs, active, debut):
         self.name = name
