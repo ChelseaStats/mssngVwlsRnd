@@ -1,16 +1,17 @@
 import datefinder
 import random
 
+
 class player:
     def __init__(self, name, goals, apps, starts, subs, active, debut):
-            self.name = name
-            self.goals = goals
-            self.apps = int(apps or 0)
-            self.starts = int(starts or 0)
-            self.subs = int(subs or 0)
-            self.total = self.starts + self.subs
-            self.active = active
-            self.debut = debut
+        self.name = name
+        self.goals = goals
+        self.apps = int(apps or 0)
+        self.starts = int(starts or 0)
+        self.subs = int(subs or 0)
+        self.total = self.starts + self.subs
+        self.active = active
+        self.debut = debut
     def __repr__(self):
         return repr(self.name, self.goals, self.apps, self.starts, self.subs, self.total, self.active, self.debut)
 
@@ -43,16 +44,16 @@ class player:
         return output_goals
 
     def get_anagram_of_string(self):
-        l = list(self.name)
-        random.shuffle(l)
-        return ''.join(l)
+        letters = list(self.name)
+        random.shuffle(letters)
+        return ''.join(letters)
 
     def get_guess_player_string(self):
         if(self.apps == 0):
             return "error"
         else:
-            goals_string=self.get_goals_string()
-            debut_string=self.get_date_from_string()
+            goals_string = self.get_goals_string()
+            debut_string = self.get_date_from_string()
             if(self.active == 1):
                 return f"#GuessThePlayer This player made his debut for #Chelsea on {debut_string} making {self.apps} appearances so far, scoring {goals_string}. #CFC"
             else:
