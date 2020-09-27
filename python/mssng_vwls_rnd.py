@@ -32,6 +32,6 @@ with open('player_history.csv') as csvfile:
         row['Active'],
         row['Debut']
         )
-    api.update_status(status = f"#MssngVwlsRnd Name the #Chelsea player: {po.name.translate(stripped)} #CFC")
-    time.sleep(10 * 60)
-    api.update_status(status = f"#MssngVwlsRnd Well done if you got it, the answer was: {po.name} #CFC #Chelsea")
+    api.update_status(status=f"#MssngVwlsRnd Name the #Chelsea player: {po.name.translate(stripped)} #CFC")
+    time.sleep(10*60)
+    api.update_status(status=f"#MssngVwlsRnd Well done if you got it, the answer was: {po.name} #CFC #Chelsea")

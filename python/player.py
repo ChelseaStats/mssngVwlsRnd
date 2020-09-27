@@ -15,7 +15,7 @@ class player:
         return repr(self.name, self.goals, self.apps, self.starts, self.subs, self.total, self.active, self.debut)
 
     def check_apps_matches_total(self):
-        if(self.apps != self.total):
+        if(self.apps!=self.total):
             print(self.name)
             return False
         else:
@@ -51,8 +51,8 @@ class player:
         if(self.apps == 0):
             return "error"
         else:
-            goals_string = self.get_goals_string()
-            debut_string = self.get_date_from_string()
+            goals_string=self.get_goals_string()
+            debut_string=self.get_date_from_string()
             if(self.active == 1):
                 return f"#GuessThePlayer This player made his debut for #Chelsea on {debut_string} making {self.apps} appearances so far, scoring {goals_string}. #CFC"
             else:

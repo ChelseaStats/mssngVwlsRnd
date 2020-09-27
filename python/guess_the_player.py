@@ -29,6 +29,6 @@ with open('player_history.csv') as csvfile:
         row['Active'],
         row['Debut']
         )
-    api.update_status(status = po.get_guess_player_string())
-    time.sleep(10 * 60)
-    api.update_status(status = f"#GuessThePlayer Well done if you got it, the answer was: {po.name} #CFC #Chelsea")
+    api.update_status(status=po.get_guess_player_string())
+    time.sleep(10*60)
+    api.update_status(status=f"#GuessThePlayer Well done if you got it, the answer was: {po.name} #CFC #Chelsea")
