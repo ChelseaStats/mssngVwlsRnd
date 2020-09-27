@@ -19,7 +19,7 @@ api = tweepy.API(auth)
 
 # processing
 with open('player_history.csv') as csvfile:
-    row = random.choice(list(csv.DictReader(csvfile)))
+    row = random.choice([a for a in list(csv.DictReader(csvfile)) if a['Games'] > 1])
     po = player.player(row['Player Name'], row['Goals'], row['Games'], row['Starter'], row['Sub'], row['Active'], row['Debut'])
     api.update_status(status = po.get_guess_player_string())
     time.sleep(10 * 60)
