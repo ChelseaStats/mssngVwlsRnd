@@ -20,7 +20,15 @@ api = tweepy.API(auth)
 # processing
 with open('player_history.csv') as csvfile:
     row = random.choice(list(csv.DictReader(csvfile)))
-    po = player.player(row['Player Name'], row['Goals'], row['Games'], row['Starter'], row['Sub'], row['Active'], row['Debut'])
+    po = player.player(
+        row['Player Name'],
+        row['Goals'],
+        row['Games'],
+        row['Starter'],
+        row['Sub'],
+        row['Active'],
+        row['Debut']
+        )
     api.update_status(status = f"#AnagramGame Name the #Chelsea player: {po.get_anagram_of_string()} #CFC")
     time.sleep(10 * 60)
     api.update_status(status = f"#AnagramGame Well done if you got it, the answer was: {po.name} #CFC #Chelsea")

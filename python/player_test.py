@@ -27,6 +27,8 @@ testdata = [
     (3, "3 goals"),
     (211, "211 goals")
 ]
+
+
 @pytest.mark.parametrize("a, b", testdata)
 def test_given_goal_output_string_returns_correctly(a, b):
     po = player.player("name", a, 0, 0, 0, 1, "2020-09-01")
