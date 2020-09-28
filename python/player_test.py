@@ -44,26 +44,26 @@ def test_given_active_player_0_games_returns_error():
 def test_given_active_player_1_games_return_string_correctly():
     po = player.player("name", 0, 1, 0, 0, 1, "2020-09-01")
     b = ("#GuessThePlayer #CFC This player made his debut for #Chelsea on 1 September 2020 "
-        "making 1 appearances so far, scoring no goals.")
+         "making 1 appearances so far, scoring no goals.")
     assert po.get_guess_player_string() == b
 
 
 def test_given_nonactive_player_1_games_return_string_correctly():
     po = player.player("name", 0, 1, 0, 0, 0, "2020-09-01")
     b = ("#GuessThePlayer #CFC This formerblue made his debut for #Chelsea on 1 September 2020 "
-        "making a total of 1 appearances, scoring no goals.")
+         "making a total of 1 appearances, scoring no goals.")
     assert po.get_guess_player_string() == b
 
 
 def test_given_active_player_10_games_return_string_correctly():
     po = player.player("name", 10, 10, 5, 5, 1, "2020-09-01")
     b = ("#GuessThePlayer #CFC This player made his debut for #Chelsea on 1 September 2020 "
-        "making 10 appearances so far, scoring 10 goals.")
+         "making 10 appearances so far, scoring 10 goals.")
     assert po.get_guess_player_string() == b
 
 
 def test_given_nonactive_player_10_games_return_string_correctly():
     po = player.player("name", 10, 10, 5, 5, 0, "2020-09-01")
     b = ("#GuessThePlayer #CFC This formerblue made his debut for #Chelsea on 1 September 2020 "
-        "making a total of 10 appearances, scoring 10 goals.")
+         "making a total of 10 appearances, scoring 10 goals.")
     assert po.get_guess_player_string() == b
