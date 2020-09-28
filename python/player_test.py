@@ -6,6 +6,7 @@ import player
 
 # tests
 def test_given_player_apps_matches_total_returns_true():
+    """" Test - checks games is the sum of starters and subs"""
     with open('player_history.csv') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
