@@ -59,7 +59,7 @@ class player:
             debut_string = self.get_date_from_string()
             if(self.active == 1):
                 return (f"#GuessThePlayer #CFC This player made his debut for #Chelsea on {debut_string} "
-                         f"making {self.apps} appearances so far, scoring {goals_string}.")
+                        f"making {self.apps} appearances so far, scoring {goals_string}.")
             else:
                 return (f"#GuessThePlayer #CFC This formerblue made his debut for #Chelsea on {debut_string} "
-                         f"making a total of {self.apps} appearances, scoring {goals_string}.")
+                        f"making a total of {self.apps} appearances, scoring {goals_string}.")
