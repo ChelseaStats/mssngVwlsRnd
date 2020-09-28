@@ -19,7 +19,7 @@ api = tweepy.API(auth)
 
 # processing
 with open('player_history.csv') as csvfile:
-    row = random.choice([a for a in list(csv.DictReader(csvfile)) if int(a['Games']) > 1])
+    row = random.choice([ a for a in list(csv.DictReader(csvfile)) if a['Games'] not in ("", " ", "0")])
     po = player.player(
         row['Player Name'],
         row['Goals'],
