@@ -7,7 +7,7 @@ import random
 class player:
     def __init__(self, name, goals, apps, starts, subs, active, debut):
         self.name = name
-        self.goals = goals
+        self.goals = int(goals or 0)
         self.apps = int(apps or 0)
         self.starts = int(starts or 0)
         self.subs = int(subs or 0)
