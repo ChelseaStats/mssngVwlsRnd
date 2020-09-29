@@ -6,15 +6,9 @@ import random
 import tweepy
 import player
 
-# secrets
-consumer_key = os.getenv('c_key')
-consumer_secret = os.getenv('c_secret')
-access_token = os.getenv('a_token')
-access_token_secret = os.getenv('a_secret')
-
 # authentication
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
+auth = tweepy.OAuthHandler(os.getenv('c_key'), os.getenv('c_secret'))
+auth.set_access_token(os.getenv('a_token'), os.getenv('a_secret'))
 api = tweepy.API(auth)
 
 # processing
